@@ -9544,6 +9544,7 @@ Promise.all((0, variables_1.users)().map((user) => __awaiter(void 0, void 0, voi
         (0, kill_1.default)("Cannot be assigned.");
     });
 }).catch((data) => {
+    console.error("[ERROR]: -------");
     console.log(data);
     const user = data.response.url.match(/[^/]*?$/)[0];
     (0, kill_1.default)(`"${user}" cannot be assigned.`);

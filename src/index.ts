@@ -25,6 +25,7 @@ Promise.all(users().map(async user => {
     });
 
 }).catch((data) => {
+    console.error("[ERROR]: -------");
     console.log(data);
     const user = data.response.url.match(/[^/]*?$/)[0];
     kill(`"${ user }" cannot be assigned.`);
